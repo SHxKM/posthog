@@ -1,0 +1,42 @@
+.properties-table-key {
+    display: flex;
+    min-width: 8rem;
+    max-width: 24rem;
+}
+
+.properties-table-value {
+    display: flex;
+    align-items: center;
+    min-width: 12rem;
+    max-width: fit-content;
+
+    .value-link {
+        > * {
+            vertical-align: middle;
+        }
+
+        > svg {
+            margin-left: 0.25rem;
+            font-size: 1rem;
+        }
+    }
+
+    .editable {
+        text-decoration: underline dotted;
+        text-decoration-color: var(--primary-3000);
+        cursor: pointer;
+
+        .posthog-3000 & {
+            padding: 0.125rem 0.25rem;
+            margin-left: -0.25rem;
+            text-decoration: none;
+            border: 1px solid transparent;
+            border-radius: calc(var(--radius) * 0.75);
+
+            &:hover {
+                background: var(--bg-light);
+                border: 1px solid var(--border-light);
+            }
+        }
+    }
+}
